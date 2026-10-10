@@ -1,0 +1,5 @@
+# DEMO: bloqueada. EDITAR en la web real: "Allow: /"
+User-agent: *
+Disallow: /
+
+Sitemap: https://www.EJEMPLO.com/sitemap.xml

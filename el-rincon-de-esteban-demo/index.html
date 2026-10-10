@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- EDITAR: title (máx. ~60 caracteres) y description (máx. ~155) con cocina + ciudad -->
+<title>Cocina española en Madrid | El Rincón de Esteban</title>
+<meta name="description" content="Restaurante de cocina española tradicional en el Barrio de las Letras, Madrid. Desde 1992. Rabo de toro, cochinillo y arroces. Calle de Santa Catalina, 3.">
+<link rel="canonical" href="https://www.EJEMPLO.com/">
+<!-- DEMO: noindex para que no se indexe. EDITAR: poner "index, follow" en la web real del cliente -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1E2B24">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E2B24'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23E3A81B'/%3E%3C/svg%3E">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="El Rincón de Esteban | Cocina española en Madrid">
+<meta property="og:description" content="Cocina española tradicional en el Barrio de las Letras, Madrid. Reserva por teléfono o WhatsApp.">
+<meta property="og:url" content="https://www.EJEMPLO.com/">
+<meta name="twitter:card" content="summary">
+<!-- EDITAR: dominio real en canonical, og:url, JSON-LD, robots.txt y sitemap.xml (ahora EJEMPLO.com) -->
+<!-- EDITAR: añadir og:image (1200x630) cuando haya foto real -->
+<!-- EDITAR: añadir "image" (foto real) y "priceRange" cuando el cliente los confirme -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "El Rincón de Esteban",
+  "url": "https://www.EJEMPLO.com/",
+  "telephone": "+34914292034",
+  "servesCuisine": ["Española", "Cocina tradicional"],
+  "acceptsReservations": "True",
+  "foundingDate": "1992-11-20",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle de Santa Catalina, 3",
+    "addressLocality": "Madrid",
+    "postalCode": "28014",
+    "addressRegion": "Madrid",
+    "addressCountry": "ES"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 40.415863, "longitude": -3.6975762},
+  "sameAs": ["https://www.facebook.com/elrincondeesteban", "https://www.instagram.com/elrincondeestebanrestaurante/"],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "13:30", "closes": "00:00"}
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1E2B24; --ink-2:#2C3D33; --paper:#FAF9F5; --line:#DAD6C8; --muted:#4F5B53;
+  --saffron:#E3A81B; --wa:#0E7A3E; --err:#B3261E;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font:1rem/1.65 var(--sans);color:var(--ink);background:var(--paper);padding-bottom:72px}
+img{max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0 0 .6em;font-weight:700}
+h1{font-size:clamp(2.2rem,7vw,4rem)}
+h2{font-size:clamp(1.7rem,4.5vw,2.4rem)}
+h3{font-size:1.25rem}
+p{margin:0 0 1em;max-width:62ch}
+section{padding:4rem 0}
+.skip{position:absolute;left:-999px;top:0;background:var(--saffron);color:var(--ink);padding:.7rem 1rem;z-index:100}
+.skip:focus{left:0}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem 1.4rem;border-radius:4px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700}
+.btn-primary{background:var(--saffron);color:var(--ink)}
+.btn-primary:hover{background:#F0B92E}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#0A6733}
+.btn-ghost{border-color:currentColor;color:#fff;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* Cabecera */
+header{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:64px}
+.brand{font-family:var(--serif);font-size:1.25rem;font-weight:700;text-decoration:none}
+nav ul{display:none;list-style:none;margin:0;padding:0;gap:1.5rem}
+nav a{text-decoration:none;padding:.5rem 0;display:inline-block}
+nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.menu-btn{background:none;border:2px solid #fff;color:#fff;min-height:44px;min-width:44px;border-radius:4px;font:inherit;cursor:pointer}
+nav.open ul{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:64px;background:var(--ink);padding:.5rem 1.25rem 1rem;border-top:1px solid var(--ink-2)}
+nav.open li a{padding:.8rem 0;width:100%}
+@media(min-width:820px){
+  .menu-btn{display:none}
+  nav ul{display:flex}
+  body{padding-bottom:0}
+  .mobile-bar{display:none!important}
+  nav.open ul{flex-direction:row;position:static;padding:0;border:0;background:none}
+  nav.open li a{padding:.5rem 0;width:auto}
+}
+
+/* Hero */
+.hero{background:var(--ink);color:#fff;padding:4.5rem 0 4rem;background-image:radial-gradient(circle at 85% 20%,rgba(227,168,27,.22),transparent 45%)}
+.hero p{font-size:1.15rem;color:#E6E9E4}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+.hero small{display:block;margin-top:1.2rem;color:#C9D0CA}
+
+/* Carta con puntos de guía */
+.carta{list-style:none;margin:0;padding:0;max-width:640px}
+.carta li{display:flex;align-items:baseline;gap:.5rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.carta .n{font-weight:600}
+.carta .d{display:block;font-weight:400;color:var(--muted);font-size:.95rem}
+.carta .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+.carta .p{font-weight:700;white-space:nowrap}
+.cols{display:grid;gap:2.5rem}
+@media(min-width:820px){.cols{grid-template-columns:1fr 1fr}}
+
+.alt{background:#EFEDE3}
+table{border-collapse:collapse;width:100%;max-width:460px}
+th,td{padding:.6rem .4rem;border-bottom:1px solid var(--line);text-align:left}
+th{font-weight:600}
+
+/* Formulario */
+form{display:grid;gap:1rem;max-width:560px}
+.row2{display:grid;gap:1rem}
+@media(min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:600;margin-bottom:.3rem}
+input,select,textarea{width:100%;min-height:48px;padding:.65rem .8rem;font:inherit;color:var(--ink);background:#fff;border:2px solid #8A9189;border-radius:4px}
+textarea{min-height:96px;resize:vertical}
+input[aria-invalid="true"],select[aria-invalid="true"]{border-color:var(--err)}
+.err{color:var(--err);font-size:.9rem;min-height:1.2em;margin:.2rem 0 0}
+.check{display:flex;gap:.6rem;align-items:flex-start;font-weight:400}
+.check input{width:24px;min-height:24px;margin-top:.15rem;flex:none}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+#estado{padding:.9rem 1rem;border-radius:4px;display:none}
+#estado.ok{display:block;background:#E3F1E8;color:#0B4F28}
+#estado.ko{display:block;background:#FBE6E4;color:#7A1812}
+
+/* Reseñas y contacto */
+.resenas{background:var(--ink);color:#fff}
+.resenas a.btn{margin-top:.5rem}
+.map{border:0;width:100%;height:340px;border-radius:4px;background:#ddd}
+address{font-style:normal}
+footer{background:var(--ink);color:#D5DBD6;padding:2rem 0;font-size:.95rem}
+footer a{margin-right:1rem}
+
+/* Barra móvil */
+.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--ink-2);padding-bottom:env(safe-area-inset-bottom,0)}
+.mobile-bar a{display:flex;align-items:center;justify-content:center;min-height:56px;text-decoration:none;font-weight:700;color:#fff;background:var(--ink)}
+.mobile-bar .w{background:var(--wa)}
+.mobile-bar .r{background:var(--saffron);color:var(--ink)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.demo{background:#FFF3B0;color:#1E2B24;text-align:center;font-size:.9rem;padding:.5rem 1rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<!-- DEMO: borrar esta franja en la web real del cliente -->
+<div class="demo">Maqueta de demostración con datos públicos de El Rincón de Esteban. No es su web oficial.</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#inicio">El Rincón de Esteban</a>
+    <nav id="nav" aria-label="Principal">
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuList" aria-label="Abrir menú">☰</button>
+      <ul id="menuList">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#horarios">Horarios</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <h1>Restaurante de cocina española en el Barrio de las Letras, Madrid</h1>
+      <p>Cocina tradicional con producto de temporada y una extensa carta de vinos. Comidas y cenas en pleno centro, desde 1992.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#reservas">Reservar mesa</a>
+        <a class="btn btn-wa" href="https://wa.me/34696237007?text=Hola%2C%20quisiera%20reservar%20una%20mesa" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+34914292034">Llamar al 91 429 20 34</a>
+      </div>
+      <small>Calle de Santa Catalina, 3, 28014 Madrid</small>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <div class="wrap">
+      <h2>Una casa de cocina española desde 1992</h2>
+      <!-- Historia basada en la web oficial. EDITAR si el cliente prefiere otro texto -->
+      <p>El Rincón de Esteban abrió el 20 de noviembre de 1992 y lleva el nombre de su fundador, muy querido por su trato en sala. Desde septiembre de 2017 dirige la cocina el chef gallego Jesús Barreiro, que mantiene los sabores de siempre con producto de temporada.</p>
+      <p>Muchas familias vuelven generación tras generación a celebrar aquí sus ocasiones. Reservar con antelación nos ayuda a preparar tu mesa.</p>
+    </div>
+  </section>
+
+  <section id="carta" class="alt">
+    <div class="wrap">
+      <h2>Carta</h2>
+      <p>Una selección de platos de la carta. Consulta alérgenos al reservar o en sala.</p>
+      <!-- EDITAR: añadir precios reales (span class="p") cuando el cliente los facilite -->
+      <div class="cols">
+        <div>
+          <h3>Para compartir</h3>
+          <ul class="carta">
+            <li><span><span class="n">Jamón ibérico de bellota</span></span></li>
+            <li><span><span class="n">Pulpo a feira</span></span></li>
+            <li><span><span class="n">Croquetas caseras</span><span class="d">Degustación</span></span></li>
+            <li><span><span class="n">Patatas revolconas con torreznos</span></span></li>
+            <li><span><span class="n">Calamares fritos estilo Bar Otero</span><span class="d">Con huevo frito</span></span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Arroces y pastas</h3>
+          <ul class="carta">
+            <li><span><span class="n">Paella mixta</span><span class="d">Pollo y pescado</span></span></li>
+            <li><span><span class="n">Paella de pescados y mariscos</span></span></li>
+            <li><span><span class="n">Paella de verduras</span></span></li>
+            <li><span><span class="n">Arroz con bogavante</span></span></li>
+            <li><span><span class="n">Canelones de rabo de toro</span></span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Del mar</h3>
+          <ul class="carta">
+            <li><span><span class="n">Rodaballo a la parrilla</span><span class="d">Con su refrito</span></span></li>
+            <li><span><span class="n">Merluza rellena de centolla</span></span></li>
+            <li><span><span class="n">Rape de barriga negra a la donostiarra</span></span></li>
+            <li><span><span class="n">Chipirones de anzuelo a la plancha</span><span class="d">Con su pil-pil</span></span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Carnes y tradición</h3>
+          <ul class="carta">
+            <li><span><span class="n">Cochinillo estilo Arévalo</span></span></li>
+            <li><span><span class="n">Rabo de toro estofado</span><span class="d">Con salsa de vino tinto</span></span></li>
+            <li><span><span class="n">Chuletón de vaca rubia gallega</span></span></li>
+            <li><span><span class="n">Callos a la madrileña</span></span></li>
+            <li><span><span class="n">Steak tartar cortado a cuchillo</span><span class="d">Sobre tuétano</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:1.5rem">Postres caseros: tarta de queso, torrija caramelizada, tarta de Santiago y más. <strong>Precios en sala o por teléfono.</strong></p>
+    </div>
+  </section>
+
+  <section id="horarios">
+    <div class="wrap">
+      <h2>Horarios</h2>
+      <!-- EDITAR: confirmar días de cierre con el cliente (y actualizar el JSON-LD y CERRADO en el script) -->
+      <table>
+        <caption class="hp">Horario de apertura</caption>
+        <tr><th scope="row">Todos los días</th><td>13:30 a 00:00</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="reservas" class="alt">
+    <div class="wrap">
+      <h2>Reserva tu mesa</h2>
+      <p>Rellena el formulario y te confirmamos por teléfono o WhatsApp. Si prefieres, escríbenos directamente.</p>
+      <p><a class="btn btn-wa" href="https://wa.me/34696237007?text=Hola%2C%20quisiera%20reservar%20una%20mesa" target="_blank" rel="noopener">Reservar por WhatsApp</a></p>
+
+      <form id="reserva" novalidate>
+        <!-- EDITAR: si usas Web3Forms, descomenta y pon tu clave pública -->
+        <!-- <input type="hidden" name="access_key" value="TU_CLAVE"> -->
+        <input type="hidden" name="asunto" value="Nueva solicitud de reserva (web)">
+        <div class="hp" aria-hidden="true"><label>No rellenar<input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+
+        <div>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" autocomplete="name" required>
+          <p class="err" id="e-nombre"></p>
+        </div>
+        <div class="row2">
+          <div>
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+            <p class="err" id="e-telefono"></p>
+          </div>
+          <div>
+            <label for="email">Email (opcional)</label>
+            <input id="email" name="email" type="email" autocomplete="email">
+            <p class="err" id="e-email"></p>
+          </div>
+        </div>
+        <div class="row2">
+          <div>
+            <label for="fecha">Fecha</label>
+            <input id="fecha" name="fecha" type="date" required>
+            <p class="err" id="e-fecha"></p>
+          </div>
+          <div>
+            <label for="hora">Hora</label>
+            <select id="hora" name="hora" required>
+              <option value="">Elige hora</option>
+              <option>13:30</option><option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option>
+              <option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option><option>22:30</option>
+            </select>
+            <p class="err" id="e-hora"></p>
+          </div>
+        </div>
+        <div>
+          <label for="personas">Número de personas</label>
+          <select id="personas" name="personas" required>
+            <option value="">Elige</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option value="9+">Más de 8</option>
+          </select>
+          <p class="err" id="e-personas"></p>
+        </div>
+        <div>
+          <label for="notas">Comentarios (alergias, trona, celebración…)</label>
+          <textarea id="notas" name="notas"></textarea>
+        </div>
+        <div>
+          <label class="check" for="acepto">
+            <input id="acepto" name="acepto" type="checkbox" required>
+            <span>He leído la <a href="politica-privacidad.html">política de privacidad</a> y acepto que usen mis datos para gestionar la reserva.</span>
+          </label>
+          <p class="err" id="e-acepto"></p>
+        </div>
+        <button class="btn btn-primary" type="submit" id="enviar">Solicitar reserva</button>
+        <div id="estado" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="resenas" id="resenas">
+    <div class="wrap">
+      <h2>Tu opinión nos ayuda</h2>
+      <p>Si has comido con nosotros, cuéntanos qué tal fue. Tu reseña en Google tarda un minuto y ayuda a que más gente nos encuentre.</p>
+      <!-- EDITAR: sustituir por el enlace writereview con el Place ID real (ahora abre la ficha en Maps). Antes: (Google Business Profile > "Pedir reseñas"). Es el mismo que va en la tarjeta NFC -->
+      <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=El+Rinc%C3%B3n+de+Esteban+Calle+de+Santa+Catalina+3+Madrid" target="_blank" rel="noopener">Dejar una reseña en Google</a>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <h2>Cómo llegar y contacto</h2>
+      <div class="cols">
+        <div>
+          <address>
+            <strong>El Rincón de Esteban</strong><br>
+            Calle de Santa Catalina, 3<br>
+            28014 Madrid<br>
+            Teléfono: <a href="tel:+34914292034">91 429 20 34</a><br>
+            <!-- EDITAR: confirmar que el 696 237 007 tiene WhatsApp -->
+            WhatsApp: <a href="https://wa.me/34696237007" target="_blank" rel="noopener">696 237 007</a><br>
+            Email: <a href="mailto:rin.de.esteban@gmail.com">rin.de.esteban@gmail.com</a>
+          </address>
+          <p style="margin-top:1rem">Síguenos en <a href="https://www.instagram.com/elrincondeestebanrestaurante/" target="_blank" rel="noopener">Instagram</a> y <a href="https://www.facebook.com/elrincondeesteban" target="_blank" rel="noopener">Facebook</a>.</p>
+        </div>
+        <div>
+          <iframe class="map" title="Mapa de Google con la ubicación de El Rincón de Esteban" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=El+Rinc%C3%B3n+de+Esteban,+Calle+de+Santa+Catalina+3,+28014+Madrid&amp;output=embed"></iframe>
+          <p style="margin-top:.6rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=El+Rinc%C3%B3n+de+Esteban+Calle+de+Santa+Catalina+3+Madrid" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="anio">2026</span> El Rincón de Esteban. Calle de Santa Catalina, 3, 28014 Madrid.</p>
+    <p><a href="aviso-legal.html">Aviso legal</a><a href="politica-privacidad.html">Privacidad</a><a href="politica-cookies.html">Cookies</a></p>
+  </div>
+</footer>
+
+<div class="mobile-bar" role="navigation" aria-label="Acciones rápidas">
+  <a href="tel:+34914292034">Llamar</a>
+  <a class="w" href="https://wa.me/34696237007?text=Hola%2C%20quisiera%20reservar%20una%20mesa" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="r" href="#reservas">Reservar</a>
+</div>
+
+<script>
+(function(){
+  // EDITAR: URL del servicio de formularios (Web3Forms: https://api.web3forms.com/submit | Formspree: https://formspree.io/f/XXXX)
+  // Si se deja vacío, el formulario abre WhatsApp con los datos ya escritos.
+  var FORM_ENDPOINT = "";
+  var WA = "34696237007";
+  // Días de cierre: 0=domingo, 1=lunes... 6=sábado. Vacío = abre todos los días. EDITAR con el cliente.
+  var CERRADO = [];
+
+  var nav=document.getElementById('nav'), btn=document.getElementById('menuBtn');
+  btn.addEventListener('click',function(){
+    var o=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',o);
+    btn.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú');
+  });
+  document.querySelectorAll('#menuList a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')})});
+
+  document.getElementById('anio').textContent=new Date().getFullYear();
+
+  var f=document.getElementById('reserva'), fecha=document.getElementById('fecha');
+  var hoy=new Date(); hoy.setMinutes(hoy.getMinutes()-hoy.getTimezoneOffset());
+  fecha.min=hoy.toISOString().slice(0,10);
+
+  function setErr(id,msg){
+    var el=document.getElementById('e-'+id), inp=document.getElementById(id);
+    el.textContent=msg||''; if(inp) inp.setAttribute('aria-invalid',msg?'true':'false');
+    return !msg;
+  }
+  function validar(){
+    var ok=true,v=function(id){return document.getElementById(id).value.trim()};
+    ok=setErr('nombre',v('nombre').length<2?'Escribe tu nombre.':'')&&ok;
+    ok=setErr('telefono',/^[+()\d\s-]{9,16}$/.test(v('telefono'))?'':'Escribe un teléfono válido, por ejemplo 600 00 00 00.')&&ok;
+    ok=setErr('email',v('email')&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))?'Revisa el email: falta algo.':'')&&ok;
+    ok=setErr('fecha',!v('fecha')?'Elige una fecha.':v('fecha')<fecha.min?'Elige hoy o una fecha futura.':CERRADO.indexOf(new Date(v('fecha')+'T12:00:00').getDay())>-1?'Ese día estamos cerrados. Elige otra fecha.':'')&&ok;
+    ok=setErr('hora',v('hora')?'':'Elige una hora.')&&ok;
+    ok=setErr('personas',v('personas')?'':'Indica cuántas personas sois.')&&ok;
+    ok=setErr('acepto',document.getElementById('acepto').checked?'':'Debes aceptar la política de privacidad para enviar.')&&ok;
+    return ok;
+  }
+  function estado(t,c){var e=document.getElementById('estado');e.className=c;e.textContent=t}
+
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(f.botcheck.value) return;
+    if(!validar()){var p=f.querySelector('[aria-invalid="true"]'); if(p)p.focus(); return;}
+    var d=new FormData(f), g=function(k){return d.get(k)||'-'};
+    var msg='Hola, quiero reservar mesa.\nNombre: '+g('nombre')+'\nTeléfono: '+g('telefono')+'\nEmail: '+g('email')+'\nFecha: '+g('fecha')+' a las '+g('hora')+'\nPersonas: '+g('personas')+'\nComentarios: '+g('notas');
+    if(!FORM_ENDPOINT){
+      window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank','noopener');
+      estado('Se ha abierto WhatsApp con tu solicitud. Pulsa enviar allí para terminar.','ok');
+      return;
+    }
+    var b=document.getElementById('enviar'); b.disabled=true; b.textContent='Enviando…';
+    fetch(FORM_ENDPOINT,{method:'POST',body:d,headers:{'Accept':'application/json'}})
+      .then(function(r){if(!r.ok)throw 0; return r.json().catch(function(){return {}})})
+      .then(function(){f.reset();estado('Solicitud enviada. Te confirmaremos la reserva por teléfono o WhatsApp.','ok')})
+      .catch(function(){estado('No se ha podido enviar. Inténtalo de nuevo o reserva por WhatsApp o llamando al 91 429 20 34.','ko')})
+      .finally(function(){b.disabled=false;b.textContent='Solicitar reserva'});
+  });
+})();
+</script>
+</body>
+</html>
